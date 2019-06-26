@@ -1,17 +1,15 @@
 package pl.sda.gdajava25.insertionSort;
 
 public class myInsertionSort {
-    static int[] sort(int[] array) {
-        for (int a : array) {
-            int lastSorted = 0;
-            for (int i = lastSorted; i == 0; i--) {
-                if (array[i] > a) {
-                    int tymczasowa = array[i];
+    public static void sort(int[] array) {
+        for (int j = 0; j < array.length; j++) { // * n (obiegów)
+            for (int i = 0; i < array.length - 1 - j; i++) { // * n-1 (obiegów)
+                if (array[i] < array[i + 1]) {
+                    int tmp = array[i];
                     array[i] = array[i + 1];
-                    array[i + 1] = tymczasowa;
-                } else break;
+                    array[i + 1] = tmp;
+                }
             }
         }
-        return array;
     }
 }

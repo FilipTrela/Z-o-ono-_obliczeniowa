@@ -1,7 +1,7 @@
 package pl.sda.gdajava25.selectionSort;
 
 public class MySelectionSort {
-    static int[] sort(int[] array) {
+    public static void sort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int indeks = i;
             for (int j = i + 1; j < array.length; j++) {
@@ -14,6 +14,5 @@ public class MySelectionSort {
             array[indeks] = array[i];
             array[i] = min;
         }
-        return array;
     }
 }
